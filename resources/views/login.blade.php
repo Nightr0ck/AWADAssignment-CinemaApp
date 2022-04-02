@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <h1>This is the login page</h1>
+    <h1>Login to your account</h1>
+
+    <div class="loginForm">
+        <form action="/login" method="POST">
+            @csrf
+            <div class="username">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" value={{ old("username") }}>
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <input type="checkbox" name="remember" id="remember" {{ old("remember") ? "checked" : "" }}>
+            <label for="remember">Remember me</label><br>
+            <div class="login">
+                <input type="submit" value="Login">
+                @error("invalid")
+                    <span class="invalid">{{ $message }}</span>
+                @enderror
+            </div>
+        </form>
+    </div>
 </body>
 </html>

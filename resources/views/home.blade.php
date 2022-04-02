@@ -11,5 +11,12 @@
 </head>
 <body>
     <h1>This is the home page</h1>
+    @auth
+        <span>User is logged in</span>
+    @endauth
+
+    @guest
+        <span>User is NOT logged in</span>
+    @endguest
 </body>
 </html>

@@ -1,0 +1,19 @@
+.loginForm {
+    margin-top: 10px;
+}
+
+.username {
+    margin-bottom: 5px;
+}
+
+.password {
+    margin-top: 5px;
+}
+
+.login {
+    margin-top: 5px;
+}
+
+.invalid {
+    color: red;
+}

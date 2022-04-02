@@ -142,8 +142,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'password' => [
+            'regex' => 'Your password must have an uppercase letter, a lowercase letter, a number and a special symbol (e.g.: @!-+)',
         ],
     ],
 
