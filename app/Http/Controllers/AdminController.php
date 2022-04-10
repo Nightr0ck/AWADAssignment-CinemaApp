@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Movie;
 use App\Models\Hall;
 use Illuminate\Support\Facades\DB;
-// use Symfony\Component\Console\Output\ConsoleOutput;
 
 class AdminController extends Controller
 {
@@ -44,12 +43,10 @@ class AdminController extends Controller
 
     function viewEditMoviePage(Request $req, $movieID)
     {
-        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
         $checkedHalls = array();
         foreach (DB::select("SELECT hall_id FROM hall_movie WHERE movie_id=$movieID") as $hallMovie) {
             array_push($checkedHalls, $hallMovie->hall_id);
         }
-        $out->writeln($checkedHalls);
 
         return view("adminEditMovie", ["movie" => Movie::find($movieID), "halls" => Hall::all(), "checkedHalls" => $checkedHalls]);
     }
