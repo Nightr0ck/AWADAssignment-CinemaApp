@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/signUp.css">
 </head>
 <body>
+    <x-nav-bar-header />
     <h1>Sign up for an account</h1>
     <form action="/signup" method="POST">
         @csrf

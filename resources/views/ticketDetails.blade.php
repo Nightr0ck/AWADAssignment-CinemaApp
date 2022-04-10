@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ticket Details</title>
 
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/ticketDetails.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/ticketDetails.css">
 </head>
 <body>
+    <x-nav-bar-header />
     <h1>This is the ticket details page</h1>
 </body>
 </html>

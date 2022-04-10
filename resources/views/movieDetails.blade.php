@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie Details</title>
 
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/movieDetails.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/movieDetails.css">
 </head>
 <body>
+    <x-nav-bar-header />
     <h1>This is the movie details page</h1>
 </body>
 </html>

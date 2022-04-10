@@ -19,6 +19,7 @@ class CreateMoviesTable extends Migration
             $table->smallInteger("duration");
             $table->text("synopsis");
             $table->string("genre", 30);
+            $table->softDeletes($column = "deleted_at");
         });
     }
 

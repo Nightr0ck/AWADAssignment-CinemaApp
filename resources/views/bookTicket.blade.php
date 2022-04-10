@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Book a Ticket</title>
 
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/bookTicket.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/bookTicket.css">
 </head>
 <body>
+    <x-nav-bar-header />
     <h1>This is the ticket booking page</h1>
 </body>
 </html>

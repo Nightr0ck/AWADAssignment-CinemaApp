@@ -16,6 +16,7 @@ class CreateHallsTable extends Migration
         Schema::create('halls', function (Blueprint $table) {
             $table->id();
             $table->string("type", 30);
+            $table->softDeletes($column = "deleted_at");
         });
     }
 

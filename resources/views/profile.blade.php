@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
 
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
+    <x-nav-bar-header />
     <h1>This is the profile page</h1>
 </body>
 </html>

@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Update Profile</title>
+    <title>No Access</title>
 
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/updateProfile.css">
 </head>
 <body>
-    <x-nav-bar-header />
-    <h1>This is the update profile page</h1>
+    <h1>You do not have access to that page</h1>
+    <a href="/">Back to home</a>
 </body>
 </html>

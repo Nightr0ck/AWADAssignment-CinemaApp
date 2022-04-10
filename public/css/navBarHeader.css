@@ -1,0 +1,36 @@
+.navBarContainer {
+    height: 50px;
+    border-bottom: 1px solid black;
+    font-size: 16pt;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation {
+    flex: 4.5;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.profile {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    border-left: 1px solid black;
+}
+
+.navigation > a, .profile > a {
+    margin: 0 20px 0 20px;
+    color:black;
+    text-decoration: none;
+}
+
+.navigation > a:hover, .profile > a:hover {
+    text-decoration: underline;
+}

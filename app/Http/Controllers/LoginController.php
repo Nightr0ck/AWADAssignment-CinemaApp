@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -22,5 +22,13 @@ class LoginController extends Controller
         {
             return back()->withInput($req->only("username", "remember"))->withErrors(["invalid" => "Invalid login credentials"]);
         }
+    }
+
+    function logout(Request $req)
+    {
+        Auth::logout();
+        $req->session()->invalidate();
+        $req->session()->regenerateToken();
+        return redirect("/");
     }
 }
