@@ -15,7 +15,7 @@ class User extends Authenticatable
     protected $keyType = "string";
     protected $guard = "admin";
     public $timestamps = false;
-    protected $fillable = ["username", "password"];
+    protected $fillable = ["username", "password", "isAdmin"];
     protected $hidden = ['password','remember_token'];
     
     public function tickets()

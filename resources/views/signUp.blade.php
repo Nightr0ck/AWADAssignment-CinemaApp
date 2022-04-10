@@ -32,6 +32,15 @@
                 @enderror
             </span>
         </div>
+        <div class="password">
+            <label for="password">Confirm password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword">
+            <span class="invalid">
+                @error('confirmPassword')
+                    {{ $message }}
+                @enderror
+            </span>
+        </div>
         <input type="submit" value="Sign up">
     </form>
 </body>

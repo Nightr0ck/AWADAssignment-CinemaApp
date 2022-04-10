@@ -17,24 +17,41 @@
         <div>
             <label for="name">Movie name</label>
             <input id="name" name="name" type="text">
+            @error('name')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="duration">Movie duration (minutes)</label>
             <input id="duration" name="duration" type="number">
+            @error('duration')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="synopsis">Movie synopsis</label>
             <textarea id="synopsis" name="synopsis" rows="10"></textarea>
+            @error('synopsis')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="genre">Movie genre</label>
             <input id="genre" name="genre" type="text">
+            @error('genre')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div style="flex-direction: row;">
             @foreach ($halls as $hall)
                 <input id={{$hall["id"]}} name="halls[]" value={{$hall["id"]}} type="checkbox">
                 <label for={{$hall["id"]}} style="margin-right: 15px;">{{$hall["type"]}}</label>
             @endforeach
+        </div>
+        <div>
+            @error('halls')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <input type="submit" value="Create">
     </form>

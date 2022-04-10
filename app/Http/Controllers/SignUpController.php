@@ -17,10 +17,11 @@ class SignUpController extends Controller
     {
         $req->validate([
             "username" => ["required", "unique:users,username"],
-            "password" => ["required", "regex:/[A-Z]/", "regex:/[a-z]/", "regex:/[0-9]/", "regex:/\W/"]
+            "password" => ["required", "regex:/[A-Z]/", "regex:/[a-z]/", "regex:/[0-9]/", "regex:/\W/"],
+            "confirmPassword" => "same:password"
         ]);
 
-        User::create(["username" => $req->username, "password" => Hash::make($req->password)]);
+        User::create(["username" => $req->username, "password" => Hash::make($req->password), "isAdmin" => false]);
 
         return redirect("/");
     }

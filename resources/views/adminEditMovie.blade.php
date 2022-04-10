@@ -18,19 +18,30 @@
         <div style="white-space: pre">
             <label for="name">Movie name</label>
             <textarea name="name" id="name">{{$movie["name"]}}</textarea>
+            @error('name')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="duration">Movie duration (minutes)</label>
             <input id="duration" name="duration" type="number" value={{$movie["duration"]}}>
+            @error('duration')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="synopsis">Movie synopsis</label>
             <textarea id="synopsis" name="synopsis" rows="10">{{$movie["synopsis"]}}</textarea>
+            @error('synopsis')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="genre">Movie genre</label>
             <textarea name="genre" id="genre">{{$movie["genre"]}}</textarea>
-            {{-- <input id="genre" name="genre" type="text" value={{$movie["genre"]}}> --}}
+            @error('genre')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <div style="flex-direction: row;">
             @foreach ($halls as $hall)
@@ -41,6 +52,11 @@
                 @endif
                 <label for={{$hall["id"]}} style="margin-right: 15px;">{{$hall["type"]}}</label>
             @endforeach
+        </div>
+        <div>
+            @error('halls')
+                <span class="errorMessage">{{ $message }}</span>
+            @enderror
         </div>
         <input type="submit" value="Update">
     </form>
