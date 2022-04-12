@@ -49,8 +49,8 @@
             <tr>
                 <td>{{$hall["id"]}}</td>
                 <td>{{$hall["type"]}}</td>
-                <td><a href="/admin/movie/edit/{{$hall["id"]}}">Edit</a></td>
-                <td><a href="/admin/movie/delete/{{$hall["id"]}}">Delete</a></td>
+                <td><a href="/admin/hall/edit/{{$hall["id"]}}">Edit</a></td>
+                <td><a href="/admin/hall/delete/{{$hall["id"]}}">Delete</a></td>
             </tr>
         @endforeach
     </table>

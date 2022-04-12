@@ -34,3 +34,16 @@
 .navigation > a:hover, .profile > a:hover {
     text-decoration: underline;
 }
+
+.profile > span {
+    margin: 0 20px 0 20px;
+}
+
+.profile > span > a {
+    color: black;
+    text-decoration: none;
+}
+
+.profile > span > a:hover {
+    text-decoration: underline;
+}

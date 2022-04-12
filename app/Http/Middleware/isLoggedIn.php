@@ -22,6 +22,6 @@ class isLoggedIn
             return $next($request); // load intended page
         }
         
-        return redirect("/login"); // else, redirect to login page
+        return redirect()->guest("/login"); // else, redirect to login page
     }
 }

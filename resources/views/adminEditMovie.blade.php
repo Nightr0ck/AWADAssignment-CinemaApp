@@ -15,7 +15,7 @@
 
     <form action="/admin/movie/edit/{{$movie['id']}}" method="post">
         @csrf
-        <div style="white-space: pre">
+        <div>
             <label for="name">Movie name</label>
             <textarea name="name" id="name">{{$movie["name"]}}</textarea>
             @error('name')

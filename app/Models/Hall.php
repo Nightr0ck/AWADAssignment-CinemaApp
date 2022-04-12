@@ -11,7 +11,8 @@ class Hall extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ["username", "movie_id", "date", "time", "seat", "hall_id"];
+    public $timestamps = false;
+    protected $fillable = ["type"];
     protected $dates = ["deleted_at"];
 
     public function movies()

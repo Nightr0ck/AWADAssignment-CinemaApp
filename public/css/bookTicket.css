@@ -1,0 +1,21 @@
+.showtime {
+    padding: 5px 0 10px 0
+}
+
+.seat {
+    padding: 10px 0 10px 0
+}
+
+.hall {
+    padding: 10px 0 10px 0
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+.errorMessage {
+    color: red;
+    display: flex;
+    flex-direction: column;
+}

@@ -143,7 +143,13 @@ return [
 
     'custom' => [
         'password' => [
-            'regex' => 'Your password must have an uppercase letter, a lowercase letter, a number and a special symbol (e.g.: @!-+)',
+            'regex' => 'Your password must have an uppercase letter, a lowercase letter, a number and a special symbol (e.g.: @!-+).',
+        ],
+        'newPassword' => [
+            'regex' => 'Your password must have an uppercase letter, a lowercase letter, a number and a special symbol (e.g.: @!-+).',
+        ],
+        'time' => [
+            'regex' => 'Select a time between 10 A.M. and 11:55 P.M. in 5 minute intervals.'
         ],
     ],
 

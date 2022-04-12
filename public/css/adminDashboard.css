@@ -12,6 +12,6 @@ table, th, td {
     border: 1px solid black;
 }
 
-td {
+th, td {
     padding: 0 3px 0 3px;
 }

@@ -17,7 +17,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "leequan",
             "movie_id" => 1,
-            "date" => "2022-04-02",
+            "date" => "2022-03-20",
             "time" => "20:00:00",
             "seat" => "G-07",
             "hall_id" => 1,
@@ -25,7 +25,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "leequan",
             "movie_id" => 2,
-            "date" => "2022-04-08",
+            "date" => "2022-04-21",
             "time" => "13:30:00",
             "seat" => "F-05",
             "hall_id" => 2,
@@ -35,7 +35,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "kangyee",
             "movie_id" => 1,
-            "date" => "2022-03-18",
+            "date" => "2022-04-22",
             "time" => "18:45:00",
             "seat" => "H-12",
             "hall_id" => 3,
@@ -43,7 +43,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "kangyee",
             "movie_id" => 2,
-            "date" => "2022-03-19",
+            "date" => "2022-04-23",
             "time" => "10:20:00",
             "seat" => "D-04",
             "hall_id" => 1,
@@ -53,7 +53,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "adrian",
             "movie_id" => 3,
-            "date" => "2022-03-23",
+            "date" => "2022-05-11",
             "time" => "11:40:00",
             "seat" => "E-08",
             "hall_id" => 4,
@@ -61,7 +61,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "adrian",
             "movie_id" => 4,
-            "date" => "2022-03-24",
+            "date" => "2022-05-12",
             "time" => "22:30:00",
             "seat" => "B-11",
             "hall_id" => 3,
@@ -69,7 +69,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "adrian",
             "movie_id" => 5,
-            "date" => "2022-03-25",
+            "date" => "2022-05-13",
             "time" => "14:00:00",
             "seat" => "F-12",
             "hall_id" => 1,
@@ -78,7 +78,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "lianghan",
             "movie_id" => 6,
-            "date" => "2022-04-03",
+            "date" => "2022-05-14",
             "time" => "15:20:00",
             "seat" => "C-09",
             "hall_id" => 2,
@@ -86,7 +86,7 @@ class TicketSeeder extends Seeder
         DB::table("tickets")->insert([
             "username" => "lianghan",
             "movie_id" => 7,
-            "date" => "2022-04-12",
+            "date" => "2022-05-15",
             "time" => "17:50:00",
             "seat" => "G-03",
             "hall_id" => 4,

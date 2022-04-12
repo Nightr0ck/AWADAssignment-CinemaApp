@@ -17,27 +17,27 @@ class userSeeder extends Seeder
     {
         DB::table("users")->insert([
             "username" => "leequan",
-            "password" => Hash::make("LeeQuanPass!"),
+            "password" => Hash::make("LeeQuanPass1!"),
             "isAdmin" => false
         ]);
         DB::table("users")->insert([
             "username" => "kangyee",
-            "password" => Hash::make("KangYeePass!"),
+            "password" => Hash::make("KangYeePass1!"),
             "isAdmin" => false
         ]);
         DB::table("users")->insert([
             "username" => "adrian",
-            "password" => Hash::make("AdrianPass!"),
+            "password" => Hash::make("AdrianPass1!"),
             "isAdmin" => false
         ]);
         DB::table("users")->insert([
             "username" => "lianghan",
-            "password" => Hash::make("LiangHanPass!"),
+            "password" => Hash::make("LiangHanPass1!"),
             "isAdmin" => false
         ]);
         DB::table("users")->insert([
             "username" => "admin",
-            "password" => Hash::make("AdminPass!"),
+            "password" => Hash::make("AdminPass1!"),
             "isAdmin" => true
         ]);
     }

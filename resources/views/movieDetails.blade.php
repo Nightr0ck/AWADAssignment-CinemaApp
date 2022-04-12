@@ -11,6 +11,12 @@
 </head>
 <body>
     <x-nav-bar-header />
-    <h1>This is the movie details page</h1>
+    <div class="name">{{ $movie["name"] }}</div>
+    <div class="durationGenre">
+        <div class="duration">{{ $movie["duration"] }} minutes</div>
+        <div class="genre">{{ $movie["genre"] }}</div>
+    </div>
+    <div class="synopsis">{{ $movie["synopsis"] }}</div>
+    <a href="/book/{{ $movie['id'] }}">Book tickets</a>
 </body>
 </html>

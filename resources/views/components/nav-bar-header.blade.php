@@ -10,6 +10,7 @@
     <div class="profile">
         @auth
             <a href="/logout">Logout</a>
+            <span>Hello, <a href="/profile">{{ $navBarUser["username"] }}</a></span>
         @endauth
 
         @guest

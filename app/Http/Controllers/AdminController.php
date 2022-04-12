@@ -48,7 +48,7 @@ class AdminController extends Controller
             array_push($checkedHalls, $hallMovie->hall_id);
         }
 
-        return view("adminEditMovie", ["movie" => Movie::find($movieID), "halls" => Hall::all(), "checkedHalls" => $checkedHalls]);
+        return view("adminEditMovie", ["movie" => Movie::find($movieID), "halls" => Hall::withTrashed()->get(), "checkedHalls" => $checkedHalls]);
     }
 
     function editMovie(Request $req, $movieID)
@@ -83,6 +83,45 @@ class AdminController extends Controller
     function deleteMovie(Request $req, $movieID)
     {
         Movie::find($movieID)->delete();
+        return redirect("admin");
+    }
+
+    function viewCreateHallPage(Request $req)
+    {
+        return view("adminCreateHall");
+    }
+
+    function createHall(Request $req)
+    {
+        $req->validate([
+            "type" => ["required", "max:30"],
+        ]);
+
+        Hall::create(["type" => $req["type"]]);
+        return redirect("admin");
+    }
+
+    function viewEditHallPage(Request $req, $hallID)
+    {
+        return view("adminEditHall", ["hall" => Hall::find($hallID)]);
+    }
+
+    function editHall(Request $req, $hallID)
+    {
+        $req->validate([
+            "type" => ["required", "max:30"],
+        ]);
+
+        $hall = Hall::find($hallID);
+        $hall["type"] = $req["type"];
+        $hall->save();
+
+        return redirect("admin");
+    }
+
+    function deleteHall(Request $req, $hallID)
+    {
+        Hall::find($hallID)->delete();
         return redirect("admin");
     }
 }

@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Auth;
 
 class NavBarHeader extends Component
 {
@@ -23,6 +24,6 @@ class NavBarHeader extends Component
      */
     public function render()
     {
-        return view('components.nav-bar-header');
+        return view('components.nav-bar-header', ["navBarUser" => Auth::user()]);
     }
 }
