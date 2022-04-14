@@ -3,6 +3,10 @@
     font-weight: bold;
 }
 
+.deactivate {
+    color: red;
+}
+
 .bookedTicketsHeader {
     font-size: 20pt;
     margin: 30px 0 5px 0;

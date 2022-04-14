@@ -14,7 +14,10 @@ class LoginController extends Controller
 
     function attemptLogin(Request $req)
     {
-        if (Auth::guard("user")->attempt(["username" => $req->username, "password" => $req->password], $req->remember))
+        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
+        $out->writeln($req["remember"] ? true : false );
+
+        if (Auth::guard("user")->attempt(["username" => $req->username, "password" => $req->password], $req["remember"] ? true : false))
         {
             return redirect()->intended("/");
         }

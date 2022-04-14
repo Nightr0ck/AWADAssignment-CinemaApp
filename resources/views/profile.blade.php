@@ -13,6 +13,7 @@
     <x-nav-bar-header />
     <div class="profileHeader">{{ $user["username"] }}'s profile</div>
     <a href="/profile/update/password">Update password</a>
+    <a class="deactivate" href="/profile/deactivate">Deactivate account</a>
 
     <div class="bookedTicketsHeader">Booked tickets</div>
     <table>

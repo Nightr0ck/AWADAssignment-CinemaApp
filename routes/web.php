@@ -53,6 +53,7 @@ Route::post("book/{movieID}", [BookTicketController::class, "bookTicket"])->midd
 Route::get("profile", [ProfileController::class, "viewProfilePage"])->middleware("isLoggedIn");
 Route::get("profile/update/password", [ProfileController::class, "viewUpdatePasswordPage"])->middleware("isLoggedIn");
 Route::post("profile/update/password", [ProfileController::class, "updatePassword"])->middleware("isLoggedIn");
+Route::get("profile/deactivate", [ProfileController::class, "deactivateAccount"])->middleware("isLoggedIn");
 Route::get("ticket/view/{ticketID}", [TicketDetailsController::class, "viewTicketDetailsPage"])->middleware("isLoggedIn");
 Route::get("ticket/edit/{ticketID}", [TicketDetailsController::class, "viewEditTicketPage"])->middleware("isLoggedIn");
 Route::post("ticket/edit/{ticketID}", [TicketDetailsController::class, "editTicket"])->middleware("isLoggedIn");

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ticket;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -22,11 +23,6 @@ class ProfileController extends Controller
 
     function updatePassword(Request $req)
     {
-
-        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
-        $hashedPassword = DB::select("SELECT password FROM users WHERE username=?", [Auth::user()["username"]])[0]->password;
-        $out->writeln($hashedPassword);
-
         $req->validate([
             "currentPassword" => "required",
             "newPassword" => ["required", "regex:/[A-Z]/", "regex:/[a-z]/", "regex:/[0-9]/", "regex:/\W/"],
@@ -42,5 +38,14 @@ class ProfileController extends Controller
         {
             return redirect("/profile/update/password")->withErrors(["currentPassword" => "Entered current password is incorrect"]);
         }
+    }
+
+    function deactivateAccount(Request $req)
+    {
+        Ticket::where("username", Auth::user()["username"])->delete();
+        User::where("username", Auth::user()["username"])->delete();
+        Auth::logout();
+
+        return redirect("/");
     }
 }
