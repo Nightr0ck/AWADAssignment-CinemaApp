@@ -32,13 +32,12 @@
                 <td>{{ $ticket["time"] }}</td>
                 <td>{{ $ticket["seat"] }}</td>
                 <td>{{ $ticket->hall->type }}</td>
-                @cannot('overdue', $ticket)
+                @if ($ticket->overdue())
+                    <td colspan="2">-</td>
+                @else
                     <td><a href="/ticket/edit/{{ $ticket['id'] }}">Edit</a></td>
                     <td><a href="/ticket/cancel/{{ $ticket['id'] }}">Cancel</a></td>
-                @endcannot
-                @can('overdue', $ticket)
-                    <td colspan="2">-</td>
-                @endcan
+                @endif
             </tr>
         @endforeach
     </table>

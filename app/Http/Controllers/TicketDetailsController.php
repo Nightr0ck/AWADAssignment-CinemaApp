@@ -21,7 +21,8 @@ class TicketDetailsController extends Controller
 
     function viewEditTicketPage(Request $req, $ticketID)
     {
-        if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || $req->user()->can("overdue", Ticket::find($ticketID)))
+        // if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || $req->user()->can("overdue", Ticket::find($ticketID)))
+        if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || Ticket::find($ticketID)->overdue())
         {
             return redirect("/noaccess");
         }
@@ -31,7 +32,8 @@ class TicketDetailsController extends Controller
 
     function editTicket(Request $req, $ticketID)
     {
-        if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || $req->user()->can("overdue", Ticket::find($ticketID)))
+        // if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || $req->user()->can("overdue", Ticket::find($ticketID)))
+        if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || Ticket::find($ticketID)->overdue())
         {
             return redirect("/noaccess");
         }
@@ -60,7 +62,8 @@ class TicketDetailsController extends Controller
 
     function cancelTicket(Request $req, $ticketID)
     {
-        if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || $req->user()->can("overdue", Ticket::find($ticketID)))
+        // if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || $req->user()->can("overdue", Ticket::find($ticketID)))
+        if ($req->user()->cannot("actionOnTicket", Ticket::find($ticketID)) || Ticket::find($ticketID)->overdue())
         {
             return redirect("/noaccess");
         }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Ticket extends Model
 {
@@ -25,5 +26,10 @@ class Ticket extends Model
     public function hall()
     {
         return $this->belongsTo(Hall::class);
+    }
+
+    public function overdue()
+    {
+        return Carbon::now() > Carbon::parse($this["date"] . " " . $this["time"]);
     }
 }

@@ -5,7 +5,6 @@ namespace App\Policies;
 use App\Models\User;
 use App\Models\Ticket;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use Illuminate\Support\Carbon;
 
 class TicketPolicy
 {
@@ -19,11 +18,6 @@ class TicketPolicy
     public function __construct()
     {
         //
-    }
-
-    public function overdue(User $user, Ticket $ticket)
-    {
-        return Carbon::now() > Carbon::parse($ticket["date"] . " " . $ticket["time"]);
     }
 
     public function actionOnTicket(User $user, Ticket $ticket)
