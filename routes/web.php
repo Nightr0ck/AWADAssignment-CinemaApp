@@ -9,7 +9,6 @@ use App\Http\Controllers\BookTicketController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TicketDetailsController;
 use App\Http\Controllers\AdminController;
-use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
